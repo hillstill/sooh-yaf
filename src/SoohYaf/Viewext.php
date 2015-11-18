@@ -46,7 +46,7 @@ class Viewext extends \Yaf_View_Simple{
 							if(is_array($v3)){
 								$tmp[$k1][$k2][$k3]=$v3;
 							}else{
-								if(!is_object($v3) && method_exists($v3, 'toArray')){
+								if(is_object($v3) && method_exists($v3, 'toArray')){
 									$tmp[$k1][$k2][$k3]=$v3->toArray();
 								}else{
 									$tmp[$k1][$k2][$k3]=$v3;
@@ -54,7 +54,7 @@ class Viewext extends \Yaf_View_Simple{
 							}
 						}
 					}else{
-						if(!is_object($v2) && method_exists($v2, 'toArray')){
+						if(is_object($v2) && method_exists($v2, 'toArray')){
 							$tmp[$k1][$k2]=$v2->toArray();
 						}else{
 							$tmp[$k1][$k2]=$v2;
@@ -62,7 +62,7 @@ class Viewext extends \Yaf_View_Simple{
 					}
 				}
 			}else{
-				if(!is_object($v1) && method_exists($v1, 'toArray')){
+				if(is_object($v1) && method_exists($v1, 'toArray')){
 					$tmp[$k1]=$v1->toArray();
 				}else{
 					$tmp[$k1]=$v1;

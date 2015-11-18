@@ -74,7 +74,7 @@ class SoohPlugin extends \Yaf_Plugin_Abstract{
 //		$m = strtolower($request->getModuleName());
 //		$c = strtolower($request->getControllerName());
 //		if($m!=='index'){
-//			$sess = \Sooh\DB\Acl\Acl::getInstance();
+//			$sess = \Sooh\Base\Acl\Acl::getInstance();
 //			if(!$sess->isLogined()){
 //				$sess->onNeedsLogin($_SERVER['REQUEST_URI']);
 //			}
